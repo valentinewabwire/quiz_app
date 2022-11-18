@@ -48,8 +48,10 @@ const SetupForm = () => {
               <option value="hard">Difficult</option>
             </select>
           </div>
-          <p className="error">Can't generate questions, Please try again</p>
-          <button type="submit" className="submit-btn">
+          {error && (
+            <p className="error">Can't generate questions, Please try again</p>
+          )}
+          <button type="submit" className="submit-btn" onClick={handleSubmit}>
             Start
           </button>
         </form>
